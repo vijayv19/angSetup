@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Persons Details</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Mobile</th>
+                    <th>Address</th>
+                    <th class="text-center">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="user in users">
+                    <!-- <pre>{{users}}</pre> -->
+                    <td>{{user.personid}}</td>
+                    <td>{{user.name}}</td>
+                    <td>{{user.email}}</td>
+                    <td>{{user.mobile}}</td>
+                    <td>{{user.address}}</td>
+                    <td class="text-center">
+                        <!-- <a class="btn btn-xs btn-info" ng-click="viewDistrictModal(user)">
+                            View</a> -->
+                        <a class="btn btn-xs btn-warning" data-toggle="modal" data-target="#squarespaceModal1" ng-click="personData(user)">
+                            Edit</a>
+                        <a class="btn btn-xs btn-danger" ng-click="deletePerson(user)">
+                            Delete</a>
+                    </td>
+                </tr>
+
+            </tbody </table> </div> <div class="center"><button data-toggle="modal" data-target="#squarespaceModal"
+                class="btn btn-primary center-block pull-right" style=" margin-bottom: 20px; margin-top: 20px">Add
+                Person</button>
+    </div>
+
+
+    <!-- line modal -->
+    <div class="modal fade" id="squarespaceModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span
+                            class="sr-only">Close</span></button>
+                    <h3 class="modal-title" id="lineModalLabel">Add Person Details</h3>
+                </div>
+                <div class="modal-body">
+
+                    <!-- content goes here -->
+                    <form>
+                        <div class="form-group">
+                            <label for="perId">Person Id</label>
+                            <input type="text" class="form-control" Id="perId" ng-model="personObj.id" placeholder="Enter Person Id"
+                                required>
+                            <span class="error" ng-show="personObj.id.$dirty && personObj.id.$invalid">Person
+                                Id Required!
+                            </span>
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" name="exampleInputName" ng-model="personObj.name"
+                                placeholder="Enter Name" required>
+                            <span class="error" ng-show="personObj.name.$dirty && personObj.name.$error.$required ">Person
+                                Name Required!
+                            </span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Id</label>
+                            <input type="email" class="form-control" email="exampleInputEmail1" ng-model="personObj.email"
+                                placeholder="Enter email" required>
+                            <span class="error" ng-show="personObj.email.$dirty && personObj.email.$invalid">Person
+                                Email Required!
+                            </span>
+                        </div>
+                        <div class="form-group">
+                            <label for="mobile">Mobile</label>
+                            <input type="number" class="form-control" max="10" min="10" mobile="exampleInputMobile"
+                                ng-model="personObj.mobile" placeholder="Enter mobile" required>
+                            <span class="error" ng-show="personObj.mobile.$dirty && personObj.mobile.$invalid">Person
+                                Mobile number Required!
+                            </span>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Address</label>
+                            <textarea rows="4" cols="30" type="address" class="form-control" id="address" ng-model="personObj.address"
+                                placeholder="Enter Address"></textarea>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <div class="text-center" role="group" aria-label="group button">
+                        <button type="submit" class="btn btn-default btn-hover-green" ng-click="addPerson(personObj)">Submit</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        <!-- <div class="btn-group" role="group">
+              <button type="button" class="btn btn-default" data-dismiss="modal" role="button">Close</button>
+            </div>
+            <div class="btn-group btn-delete hidden" role="group">
+              <button type="button" id="delImage" class="btn btn-default btn-hover-red" data-dismiss="modal" role="button">Delete</button>
+            </div>
+            <div class="btn-group" role="group">
+              <button type="button" id="saveImage" class="btn btn-default btn-hover-green" data-action="save" role="button">Save</button>
+            </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="squarespaceModal1" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span
+                            class="sr-only">Close</span></button>
+                    <h3 class="modal-title" id="lineModalLabel">Update Person Details</h3>
+                </div>
+                <div class="modal-body">
+
+                    <!-- content goes here -->
+                    <form>
+                        <div class="form-group">
+                            <label for="perId">Person Id</label>
+                            <input type="text" class="form-control" Id="perId" ng-model="person.personid" placeholder="Enter Person Id">
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" name="exampleInputName" ng-model="person.name"
+                                placeholder="Enter Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Id</label>
+                            <input type="email" class="form-control" email="exampleInputEmail1" ng-model="person.email"
+                                placeholder="Enter email">
+                        </div>
+                        <div class="form-group">
+                            <label for="mobile">Mobile</label>
+                            <input type="number" class="form-control" mobile="exampleInputMobile" ng-model="person.mobile"
+                                placeholder="Enter mobile">
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Address</label>
+                            <textarea rows="4" cols="30" type="address" class="form-control" id="address" ng-model="person.address"
+                                placeholder="Enter Address"></textarea>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <div class="text-center" role="group" aria-label="group button">
+                        <button type="submit" class="btn btn-default btn-hover-green" ng-click="updatePerson(person)">Submit</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        <!-- <div class="btn-group" role="group">
+                  <button type="button" class="btn btn-default" data-dismiss="modal" role="button">Close</button>
+                </div>
+                <div class="btn-group btn-delete hidden" role="group">
+                  <button type="button" id="delImage" class="btn btn-default btn-hover-red" data-dismiss="modal" role="button">Delete</button>
+                </div>
+                <div class="btn-group" role="group">
+                  <button type="button" id="saveImage" class="btn btn-default btn-hover-green" data-action="save" role="button">Save</button>
+                </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

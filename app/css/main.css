@@ -1,0 +1,238 @@
+.tile .tile-header .controls .addImportStud {
+  padding: 8px 22px;
+  font-size: 18px;
+  color: #ffffff; //#428bca;
+  -webkit-transition: color .15s linear;
+  transition: color .15s linear;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background-color: #002af8;
+}
+
+.tile .tile-body .addImportStud,
+.tile .tile-header .addImportStud {
+  padding: 8px 22px;
+  font-size: 18px;
+  color: #ffffff; //#428bca;
+  -webkit-transition: color .15s linear;
+  transition: color .15s linear;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background-color: #002af8;
+}
+
+.tile .tile-header .controls .addImportStud:hover {
+  color: #ffffff;
+}
+
+.placeholderColor::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #555555 !important;
+}
+
+.placeholderColor::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #555555 !important;
+}
+
+.placeholderColor:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #555555 !important;
+}
+
+.placeholderColor:-moz-placeholder {
+  /* Firefox 18- */
+  color: #555555 !important;
+}
+
+.placeholderColor::placeholder {
+  color: #555555 !important;
+}
+
+input[type="text"].placeholderColor::-webkit-input-placeholder {
+  color: #555555 !important;
+}
+
+// - custom modal size - dilip
+div.my-modal>div.modal-dialog {
+  width: 1200px !important;
+}
+
+//   .myModal-xlg{
+//     width:1200px!important;
+//   }
+//   @media(min-width: 1400px){
+//     .my-modal > .modal-lg {
+//         width: 1308px;
+//     }
+// }
+// custom font-color css 
+.fontColor {
+  color: #002af8 !important;
+}
+
+.glab-btn {
+  background-color: #002af8 !important;
+  color: #ffffff;
+}
+
+.noLeftRightPadding {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+.noTopBottomPadding {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+
+.noLeftPadding {
+  padding-left: 0px !important;
+}
+
+.noRightPadding {
+  padding-right: 0px !important;
+}
+
+.noBottomPadding {
+  padding-bottom: 0px !important;
+}
+
+.noTopPadding {
+  padding-top: 0px !important;
+}
+
+@media only screen and (max-width: 320px) {
+  // - custom modal size - dilip
+  div.my-modal>div.modal-dialog {
+    width: 200px !important;
+  }
+}
+/* css for login screen */
+
+body{
+ 
+
+  font-family: 'Fira Sans', sans-serif;
+}
+.breadcrumb:before{
+  color:grey;
+}
+table.striped tr {
+  border-bottom: 1px solid #d6d6d6;
+}
+td, th {
+  padding: 7px 5px;
+}
+.scroll {
+  border: 1;
+ 
+}    
+.scroll tr {
+  display: flex;
+  border-bottom: 1px solid #575757;
+}    
+.scroll td {
+  flex: 1;
+}    
+.scroll thead tr:after {
+  overflow-y: scroll;
+  visibility: hidden;
+  height: 0;
+}    
+.scroll thead th {
+  flex: 1 ;
+  display: block;
+}    
+.scroll thead th:last-child {
+  /* flex: 1 ; */
+  width: 50px;
+}    
+.scroll td:last-child {
+  /* flex: 1; */
+  width: 50px;
+}    
+
+.scroll tbody {
+  display: block;
+  overflow-y: auto;
+  height: calc(80vh - 100px);
+}
+table.highlight>tbody>tr:hover{
+  background-color:#fff1df;
+}
+i.small {
+  font-size: 1rem;
+}
+/**************scroll table horizonatally by mouse scorll*************/
+
+// .horizontal-scroll-wrapper {
+//   width: 100px;
+//   height: 300px;
+//   overflow-y: auto;
+//   overflow-x: hidden;
+// }
+// .horizontal-scroll-wrapper > div {
+//   width: 100px;
+//   height: 100px;
+// }
+// .horizontal-scroll-wrapper {
+//   transform: rotate(-90deg);
+//   transform-origin: right top;
+// }
+// .horizontal-scroll-wrapper > div {
+//   transform: rotate(90deg);
+//   transform-origin: right top;
+// }
+// .horizontal-scroll-wrapper {
+//   transform:rotate(-90deg) translateY(-100px);
+// }
+// ::-webkit-scrollbar {
+//   width: 1px;
+//   height: 1px;
+// }
+// ::-webkit-scrollbar-button {
+//   width: 1px;
+//   height: 1px;
+// }
+// body {
+//   background: #111;
+// }
+// div {
+//   -webkit-box-sizing: border-box;
+//           box-sizing: border-box;
+// }
+// .horizontal-scroll-wrapper {
+//   position: absolute;
+//   display: block;
+//   top: 0;
+//   left: 0;
+//   width: calc(250px + 1px);
+//   max-height: 750px;
+//   margin: 0;
+//   padding-top: 1px;
+//   background: #abc;
+//   overflow-y: auto;
+//   overflow-x: hidden;
+//   -webkit-transform: rotate(-90deg) translateY(-250px);
+//           transform: rotate(-90deg) translateY(-250px);
+//   -webkit-transform-origin: right top;
+//           transform-origin: right top;
+// }
+// .horizontal-scroll-wrapper > div {
+//   display: block;
+//   padding: 5px;
+//   background: #cab;
+//   -webkit-transform: rotate(90deg);
+//           transform: rotate(90deg);
+//   -webkit-transform-origin: right top;
+//           transform-origin: right top;
+// }
+// .squares {
+//   padding: 250px 0 0 0;
+// }
+// .squares > div {
+//   width: 250px;
+//   height: 250px;
+//   margin: 10px 0;
+// }

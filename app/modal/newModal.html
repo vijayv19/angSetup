@@ -1,0 +1,206 @@
+<div id="modal1">
+<div  class="modal modal-fixed-footer">
+<div class="modal-header">
+  <h3 class="modal-title custom-font modalHeading">Candidate Profile
+  </h3>
+</div>
+<div class="modal-body">
+  <!-- <p>This sure is a fine modal, isn't it?</p> -->
+  <form class="form-horizontal" name="myForm">
+    <div class="form-body">
+      <h6>Profile Details</h3>
+        <hr>
+        <div class="form-group">
+          <div class="col-md-4 col-sm-10 col-xs-12">
+            <b>Candidate Id:</b>
+            <b class="error">&nbsp;&nbsp;</b> <span ng-if="candiateDetail.CandidateId=='' || candiateDetail.CandidateId==null"
+              style="color:red;">NA</span> {{candiateDetail.CandidateId}}
+          </div>
+          <div class="col-md-4 col-sm-10 col-xs-12">
+            <b>First Name :</b>
+            <b class="error">&nbsp;&nbsp;</b> <span ng-if="candiateDetail.FirstName=='' || candiateDetail.FirstName==null"
+              style="color:red;">NA</span>{{candiateDetail.FirstName}}
+          </div>
+          <div class="col-md-4  col-sm-10 col-xs-12">
+            <b>Last Name :</b>
+            <b class="error">&nbsp;&nbsp;</b> <span ng-if="candiateDetail.LastName=='' || candiateDetail.LastName==null"
+              style="color:red;">NA</span> {{candiateDetail.LastName}}
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-md-4 col-sm-10 col-xs-12">
+            <b>Work Region:</b>
+            <b class="error">&nbsp;&nbsp;</b> <span ng-if="candiateDetail.WorkRegion=='' || candiateDetail.WorkRegion==null"
+              style="color:red;">NA</span> {{candiateDetail.WorkRegion}}
+          </div>
+          <div class="col-md-4 col-sm-10 col-xs-12">
+            <b>Work Country :</b>
+            <b class="error">&nbsp;&nbsp;</b> <span ng-if="candiateDetail.WorkCountry=='' || candiateDetail.WorkCountry==null"
+              style="color:red;">NA</span> {{candiateDetail.WorkCountry}}
+          </div>
+          <div class="col-md-4  col-sm-10 col-xs-12">
+            <b>Work City :</b>
+            <b class="error">&nbsp;&nbsp;</b> <span ng-if="candiateDetail.WorkCity=='' || candiateDetail.WorkCity==null"
+              style="color:red;">NA</span> {{candiateDetail.WorkCity}}
+          </div>
+        </div>
+        <hr>
+        <h6>Contact Details</h3>
+          <hr>
+          <div class="form-group">
+            <div class="col-md-4  col-sm-10 col-xs-12">
+              <b>Personal Email :</b>
+              <b class="error">&nbsp;&nbsp;</b> <span ng-if="candiateDetail.PersonalEmail=='' || candiateDetail.PersonalEmail==null"
+                style="color:red;">NA</span> {{candiateDetail.PersonalEmail}}
+            </div>
+            <div class="col-md-4  col-sm-10 col-xs-12">
+              <b>Personal Mobile :</b>
+              <b class="error">&nbsp;&nbsp;</b> <span ng-if="candiateDetail.Mobile=='' || candiateDetail.Mobile==null"
+                style="color:red;">NA</span> {{candiateDetail.Mobile}}
+            </div>
+            <div class="col-md-4  col-sm-10 col-xs-12">
+              <b>Home Telephone :</b>
+              <b class="error">&nbsp;&nbsp;</b> <span ng-if="candiateDetail.HomeTelephoneNumber=='' || candiateDetail.HomeTelephoneNumber==null"
+                style="color:red;">NA</span>{{candiateDetail.HomeTelephoneNumber}}
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-md-4  col-sm-10 col-xs-12">
+              <b>Work Email :</b>
+              <b class="error">&nbsp;&nbsp;</b> <span ng-if="candiateDetail.WorkEmail=='' || candiateDetail.WorkEmail==null"
+                style="color:red;">NA</span> {{candiateDetail.WorkEmail}}
+            </div>
+            <div class="col-md-4  col-sm-10 col-xs-12">
+              <b>Direct Dial :</b>
+              <b class="error">&nbsp;&nbsp;</b><span ng-if="candiateDetail.DirectDial=='' || candiateDetail.DirectDial==null"
+                style="color:red;">NA</span> {{candiateDetail.DirectDial}}
+            </div>
+            <div class="col-md-4  col-sm-10 col-xs-12">
+              <b>Switch Board :</b>
+              <b class="error">&nbsp;&nbsp;</b><span ng-if="candiateDetail.SwitchBoard=='' || candiateDetail.SwitchBoard==null"
+                style="color:red;">NA</span> {{candiateDetail.SwitchBoard}}
+            </div>
+          </div>
+          <div class="form-group">
+            <!-- <div class="col-md-6  col-sm-10 col-xs-12">
+              <b>Linkedin :</b>
+              <b class="error">&nbsp;&nbsp;</b> {{candiateDetail.WorkEmail}}
+            </div> -->
+            <div class="col-md-4  col-sm-10 col-xs-12">
+              <b>Twitter :</b>
+              <b class="error">&nbsp;&nbsp;</b><span ng-if="candiateDetail.TwitterId=='' || candiateDetail.TwitterId==null"
+                style="color:red;">NA</span> {{candiateDetail.TwitterId}}
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-md-4  col-sm-10 col-xs-12">
+              <b>Skype :</b>
+              <b class="error">&nbsp;&nbsp;</b><span ng-if="candiateDetail.SkypeId=='' || candiateDetail.SkypeId==null"
+                style="color:red;">NA</span> {{candiateDetail.SkypeId}}
+            </div>
+          </div>
+          <hr>
+          <h6> Professional Experience </h6>
+          <hr>
+          <div class="form-group">
+            <div class="col-md-4  col-sm-10 col-xs-12">
+              <b>Current Company :</b>
+              <b class="error">&nbsp;&nbsp;</b><span ng-if="candiateDetail.CompanyName=='' || candiateDetail.CompanyName==null"
+                style="color:red;">NA</span> {{candiateDetail.CompanyName}}
+            </div>
+            <div class="col-md-4  col-sm-10 col-xs-12">
+              <b>JobTitle :</b>
+              <b class="error">&nbsp;&nbsp;</b><span ng-if="candiateDetail.JobTitle=='' || candiateDetail.JobTitle==null"
+                style="color:red;">NA</span> {{candiateDetail.JobTitle}}
+            </div>
+            <div class="col-md-4  col-sm-10 col-xs-12">
+              <b>TotalExperience :</b>
+              <b class="error">&nbsp;&nbsp;</b><span ng-if="candiateDetail.TotalExperience=='' || candiateDetail.TotalExperience==null"
+                style="color:red;">NA</span> {{candiateDetail.TotalExperience}}
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-md-4  col-sm-10 col-xs-12">
+              <b>StartDate :</b>
+              <b class="error">&nbsp;&nbsp;</b><span ng-if="candiateDetail.StartDate=='' || candiateDetail.StartDate==null"
+                style="color:red;">NA</span> {{candiateDetail.StartDate}}
+            </div>
+            <div class="col-md-4  col-sm-10 col-xs-12">
+              <b>ReportsTo :</b>
+              <b class="error">&nbsp;&nbsp;</b><span ng-if="candiateDetail.ReportsTo=='' || candiateDetail.ReportsTo==null"
+                style="color:red;">NA</span> {{candiateDetail.ReportsTo}}
+            </div>
+            <div class="col-md-4  col-sm-10 col-xs-12">
+              <b>TeamSize :</b>
+              <b class="error">&nbsp;&nbsp;</b><span ng-if="candiateDetail.TotalExperience=='' || candiateDetail.TotalExperience==null"
+                style="color:red;">NA</span> {{candiateDetail.TeamSize}}
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-md-4  col-sm-10 col-xs-12">
+              <b>Department :</b>
+              <b class="error">&nbsp;&nbsp;</b><span ng-if="candiateDetail.Department=='' || candiateDetail.Department==null"
+                style="color:red;">NA</span> {{candiateDetail.Department}}
+            </div>
+            <div class="col-md-4  col-sm-10 col-xs-12">
+              <b>ProductCoverage :</b>
+              <b class="error">&nbsp;&nbsp;</b><span ng-if="candiateDetail.ProductCoverage=='' || candiateDetail.ProductCoverage==null"
+                style="color:red;">NA</span> {{candiateDetail.ProductCoverage}}
+            </div>
+            <div class="col-md-4  col-sm-10 col-xs-12">
+              <b>TeamSize :</b>
+              <b class="error">&nbsp;&nbsp;</b><span ng-if="candiateDetail.TotalExperience=='' || candiateDetail.TotalExperience==null"
+                style="color:red;">NA</span> {{candiateDetail.TeamSize}}
+            </div>
+          </div>
+          <hr>
+          <h6> Diversity </h6>
+          <hr>
+          <div class="form-group">
+            <div class="col-md-4  col-sm-10 col-xs-12">
+              <b>Nationality :</b>
+              <b class="error">&nbsp;&nbsp;</b><span ng-if="candiateDetail.Nationality=='' || candiateDetail.Nationality==null"
+                style="color:red;">NA</span> {{candiateDetail.Nationality}}
+            </div>
+            <div class="col-md-4  col-sm-10 col-xs-12">
+              <b>Gender :</b>
+              <b class="error">&nbsp;&nbsp;</b><span ng-if="candiateDetail.Gender=='' || candiateDetail.Gender==null"
+                style="color:red;">NA</span> {{candiateDetail.Gender}}
+            </div>
+            <div class="col-md-4  col-sm-10 col-xs-12">
+              <b>Age :</b>
+              <b class="error">&nbsp;&nbsp;</b><span ng-if="candiateDetail.Age=='' || candiateDetail.Age==null" style="color:red;">NA</span>
+              {{candiateDetail.Age}}
+            </div>
+          </div>
+          <hr>
+          <h6> Employment Type & Salary Information
+            </h6>
+          <hr>
+          <div class="form-group">
+              <div class="col-md-4  col-sm-10 col-xs-12">
+                <b>Salary Currency :</b>
+                <b class="error">&nbsp;&nbsp;</b><span ng-if="candiateDetail.SalaryCurrency=='' || candiateDetail.SalaryCurrency==null"
+                  style="color:red;">NA</span> {{candiateDetail.SalaryCurrency}}
+              </div>
+              <div class="col-md-4  col-sm-10 col-xs-12">
+                <b>NoticePeriod :</b>
+                <b class="error">&nbsp;&nbsp;</b><span ng-if="candiateDetail.NoticePeriod=='' || candiateDetail.NoticePeriod==null"
+                  style="color:red;">NA</span> {{candiateDetail.NoticePeriod}}
+              </div>
+              <div class="col-md-4  col-sm-10 col-xs-12">
+                <b>Age :</b>
+                <b class="error">&nbsp;&nbsp;</b><span ng-if="candiateDetail.Age=='' || candiateDetail.Age==null" style="color:red;">NA</span>
+                {{candiateDetail.Age}}
+              </div>
+            </div>
+    </div>
+  </form>
+</div>
+<div class="modal-footer">
+  <!-- <button class="btn btn-success btn-ef btn-ef-3 btn-ef-3c" ng-click="modal.ok()"><i class="fa fa-arrow-right"></i> Submit</button> -->
+  <button class="btn btn-lightred btn-ef btn-ef-4 btn-ef-4c" ng-click="cancelModal()">
+    <i class="fa fa-arrow-left"></i> Cancel</button>
+</div>
+</div>
+</div>
