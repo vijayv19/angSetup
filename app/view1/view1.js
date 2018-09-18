@@ -1,10 +1,3 @@
-/*** 
-//- all business logic will be in service & not in controller 
-//- put your logic & data in corresponding section only
-//- all variables & function name must be in camelcase & should represent what it will do
-//- add comment on every function about what it will do   
-***/
-
 (function () {
   'use strict';
 
@@ -15,7 +8,6 @@
   // aboutCtrl.$inject = ['$http', '$state'];
 
   function aboutCtrl($scope, $state, $http, $uibModal) {
-    console.log('**** inside function_name of view1.js ****', $uibModal);
     console.log('**** inside aboutCtrl of view1.js ****');
     //- ********************************* default variables/tasks begin here *************************** //
     var itemsDetails;
@@ -40,7 +32,7 @@
           $scope.default();
           $scope.cancelModal();
         } else {
-          $scope.validationObj.errorMsg = "Something went wrong!"
+          $scope.validationObj.errorMsg = "Something went wrong!";
         }
       });
     };
@@ -52,26 +44,26 @@
         errorCount: 0
       };
       if (_.isEmpty(personObj)) {
-        $scope.validationObj.errorMsg = "Please form properly"
+        $scope.validationObj.errorMsg = "Please form properly";
       } else {
         if (!isNaN(personObj.personid)) {
-          var pattern = "/^[0-9]*$/"
+          var pattern = "/^[0-9]*$/";
           if (!eval(pattern + '.test(personObj.personid)')) {
             $scope.validationObj.errorCount++;
-            $scope.validationObj.idError = "Please Enter Valid Id"
+            $scope.validationObj.idError = "Please Enter Valid Id";
           }
         } else {
           $scope.validationObj.errorCount++;
-          $scope.validationObj.idError = "Please Enter Id!"
+          $scope.validationObj.idError = "Please Enter Id!";
         }
         if (_.isEmpty(personObj.name)) {
           $scope.validationObj.errorCount++;
-          $scope.validationObj.nameError = "Please Enter Name"
+          $scope.validationObj.nameError = "Please Enter Name";
         } else if (personObj.name) {
           var pattern = "/^[a-zA-Z ]*$/"
           if (!eval(pattern + '.test(personObj.name)')) {
             $scope.validationObj.errorCount++;
-            $scope.validationObj.nameError = "Name should be in alphabet"
+            $scope.validationObj.nameError = "Name should be in alphabet";
           }
         }
         if (!isNaN(personObj.mobile)) {
@@ -83,16 +75,16 @@
           // }
           if (!eval(pattern + '.test(personObj.mobile)')) {
             $scope.validationObj.errorCount++;
-            $scope.validationObj.mobileError = "Mobile number should be 10 digit"
+            $scope.validationObj.mobileError = "Mobile number should be 10 digit";
           }
         } else {
           $scope.validationObj.errorCount++;
-          $scope.validationObj.mobileError = "Please Enter Mobile Number"
+          $scope.validationObj.mobileError = "Please Enter Mobile Number";
         }
 
         if (_.isEmpty(personObj.email)) {
           $scope.validationObj.errorCount++;
-          $scope.validationObj.emailError = "Please Enter Email Address"
+          $scope.validationObj.emailError = "Please Enter Email Address";
         }
         //else if (personObj.email) {
         //   var pattern = "/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/"
@@ -122,7 +114,6 @@
           personid: user.prevPersonId
         }
       }).then(function (response) {
-        debugger;
         console.log('response', response.data);
         if (response.data.code == 200) {
           //$state.go('about');
@@ -170,7 +161,6 @@
 
     //- function call in default
     $scope.default = function () {
-      debugger;
       $http({
         url: "http://localhost:3002/Person/findData",
         method: "GET",
@@ -186,7 +176,6 @@
 
     //-modal for add and update
     $scope.addEditPerson = function (crudType, peronUpdatedData) {
-      debugger;
       $scope.crudType = crudType;
       if (!_.isEmpty(peronUpdatedData)) {
         $scope.personObj = peronUpdatedData;
