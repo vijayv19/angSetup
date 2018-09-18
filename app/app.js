@@ -1,7 +1,10 @@
 'use strict';
 
 
-var routerApp = angular.module('myApp', ['ui.router']);
+var routerApp = angular.module('myApp', [
+    'ui.router',
+    'ui.bootstrap'
+]);
 
 routerApp.config(function ($stateProvider, $urlRouterProvider) {
 

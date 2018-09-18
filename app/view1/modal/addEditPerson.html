@@ -1,0 +1,71 @@
+<!-- line modal -->
+<div class="modal-header">
+    <h3 class="modal-title" id="modal-title">Add Person Details</h3>
+</div>
+<div class="modal-body" id="modal-body">
+    <pre>{{validationObj | json}}</pre>
+    <!-- content goes here -->
+    <form name="personRegister">
+        <div class="form-group">
+            <label for="perId">Person Id</label>
+            <input type="number" name="id" class="form-control" Id="perId" ng-model="personObj.personid" placeholder="Enter Person Id"
+                required>
+            <!-- <p ng-show="personRegister.id.$dirty && personRegister.id.$invalid" class="help-block">You
+                name is required.</p> -->
+            <!-- <span class="error" ng-class="{'has-error': personRegister.id.$error.required}"> -->
+            </span>
+            <div class="error" ng-if="validationObj.idError">
+                {{validationObj.idError}}
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" name="name" ng-model="personObj.name" placeholder="Enter Name"
+                required>
+            <span class="error" ng-show="personRegister.name.$dirty && personRegister.name.$invalid">
+                Please Enter Category Name
+            </span>
+            <div class="error" ng-if="validationObj.nameError">
+                {{ validationObj.nameError}}
+            </div>
+            <!-- <span class="error" ng-show="personObj.name.$dirty && personObj.name.$error.$required ">Person
+                                Name Required!
+                            </span> -->
+        </div>
+        <div class="form-group">
+            <label for="email">Email Id</label>
+            <input type="email" class="form-control" name="email" ng-model="personObj.email" placeholder="Enter email"
+                pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" required>
+            <span class="error" ng-show="personObj.email.$dirty && personObj.email.$invalid">Person
+                Email Required!
+            </span>
+            <div class="error" ng-if="validationObj.emailError">
+                {{ validationObj.emailError}}
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="mobile">Mobile</label>
+            <input type="number" class="form-control" name="mobile" mobile="exampleInputMobile" ng-model="personObj.mobile"
+                placeholder="Enter mobile" required>
+            <span class="error" ng-show="personObj.mobile.$dirty && personObj.mobile.$invalid">Person
+                Mobile number Required!
+            </span>
+            <div class="error" ng-if="validationObj.mobileError">
+                {{ validationObj.mobileError}}
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="address">Address</label>
+            <textarea rows="4" cols="30" type="address" class="form-control" id="address" ng-model="personObj.address"
+                placeholder="Enter Address"></textarea>
+        </div>
+
+    </form>
+</div>
+<div class="modal-footer">
+
+    <div class="text-center" role="group" aria-label="group button">
+        <button type="submit" class="btn btn-primary btn-hover-green" ng-click="checkValidation(crudType, personObj)">Submit</button>
+        <button type="button" class="btn btn-warning" ng-click="cancelModal()">Cancel</button>
+    </div>
+</div>

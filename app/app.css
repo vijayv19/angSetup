@@ -15,11 +15,16 @@
   content: "]";
 }
 
-.menu > li {
+.menu>li {
   display: inline;
 }
 
-.menu > li + li:before {
+.menu>li+li:before {
   content: "|";
   padding-right: 0.3em;
+}
+
+.error {
+  color: #ec6262;
+  font-size: 15px;
 }
